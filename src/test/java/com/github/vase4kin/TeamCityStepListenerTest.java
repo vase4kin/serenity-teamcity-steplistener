@@ -783,6 +783,13 @@ public class TeamCityStepListenerTest {
     }
 
     @Test
+    public void testAddNewExamplesFromMethodNoLoggerMessage() {
+
+        teamCityStepListener.addNewExamplesFrom(dataTable);
+        verifyArgumentCaptorCapturesNoLoggerMessages();
+    }
+
+    @Test
     public void testAssumptionViolatedMethodNoLoggerMessage() {
 
         teamCityStepListener.assumptionViolated("message");
