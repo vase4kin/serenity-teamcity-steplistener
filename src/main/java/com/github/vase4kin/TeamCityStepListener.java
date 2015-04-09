@@ -1,6 +1,7 @@
 package com.github.vase4kin;
 
 import net.thucydides.core.model.*;
+import net.thucydides.core.model.stacktrace.FailureCause;
 import net.thucydides.core.steps.ExecutedStepDescription;
 import net.thucydides.core.steps.StepFailure;
 import net.thucydides.core.steps.StepListener;
@@ -247,7 +248,7 @@ public class TeamCityStepListener implements StepListener {
             path = path.substring(0, path.length() - 6);
         }
         String title = path.replace(".", "_").replace("/", ".");
-        return title + "." + result.getMethodName().replace(".", "_");
+        return title + "." + result.getQualifiedMethodName().replace(".", "_");
     }
 
     private String getResultTitle(TestOutcome result, String name) {
@@ -342,6 +343,10 @@ public class TeamCityStepListener implements StepListener {
 
     @Override
     public void useExamplesFrom(DataTable table) {
+    }
+
+    @Override
+    public void addNewExamplesFrom(DataTable dataTable) {
     }
 
     @Override

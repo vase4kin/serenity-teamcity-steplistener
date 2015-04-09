@@ -2,6 +2,7 @@ package com.github.vase4kin;
 
 import junit.framework.TestCase;
 import net.thucydides.core.model.*;
+import net.thucydides.core.model.stacktrace.FailureCause;
 import net.thucydides.core.steps.ExecutedStepDescription;
 import net.thucydides.core.steps.StepFailure;
 import org.junit.After;
