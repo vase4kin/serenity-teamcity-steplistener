@@ -8,7 +8,7 @@
     </parent>
     <groupId>com.github.vase4kin</groupId>
     <artifactId>serenity-teamcity-steplistener</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>jar</packaging>
     <name>Serenity teamCity stepListener</name>
     <description>Provide fast and easy test reporting during team city build process</description>
