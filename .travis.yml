@@ -1,0 +1,8 @@
+language: java
+
+# need to override travis 'install' since it will try gpg sign and fail.
+install: mvn clean package -DskipTests=true
+
+# reporting code coverage to coveralls.io
+after_success:
+  - mvn clean test jacoco:report coveralls:jacoco
